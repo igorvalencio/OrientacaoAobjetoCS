@@ -8,18 +8,16 @@ conta1.saldo = 105.98;
 conta1.numero_agencia = 23;
 conta1.nome_agencia = "Agência Central";
 
-ContaCorrente conta2 = new ContaCorrente();
+Console.WriteLine("Titular: " + conta1.titular);
+Console.WriteLine("Conta: " + conta1.conta);
+Console.WriteLine("Número da agencia: " + conta1.numero_agencia);
+Console.WriteLine("Nome da agência: " + conta1.nome_agencia);
+Console.WriteLine("Saldo: " + conta1.saldo);
 
-Console.WriteLine("Titular: " + conta2.titular);
-Console.WriteLine("Conta: " + conta2.conta);
-Console.WriteLine("Número da agencia: " + conta2.numero_agencia);
-Console.WriteLine("Nome da agência: " + conta2.nome_agencia);
-Console.WriteLine("Saldo: " + conta2.saldo);
+Console.WriteLine("Saldo pré-saque: " + conta1.saldo);
+conta1.sacar(-50);
+Console.WriteLine("Saldo pós-saque: " + conta1.saldo);
 
-double saldo = 100;
-double saldo2 = conta1.saldo;
-Console.WriteLine(saldo == conta1.saldo);
-Console.WriteLine(saldo != saldo2);
 
 Console.ReadKey();
 
