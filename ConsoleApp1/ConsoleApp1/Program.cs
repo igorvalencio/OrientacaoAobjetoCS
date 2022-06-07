@@ -14,9 +14,31 @@ Console.WriteLine("Número da agencia: " + conta1.numero_agencia);
 Console.WriteLine("Nome da agência: " + conta1.nome_agencia);
 Console.WriteLine("Saldo: " + conta1.saldo);
 
-Console.WriteLine("Saldo pré-saque: " + conta1.saldo);
-conta1.sacar(-50);
-Console.WriteLine("Saldo pós-saque: " + conta1.saldo);
+ContaCorrente conta2 = new ContaCorrente();
+
+conta2.titular = "nevesmlk";
+conta2.conta = "2256987 - x";
+conta2.saldo = 203.98;
+conta2.numero_agencia = 26;
+conta2.nome_agencia = "Agência Central";
+
+Console.WriteLine("Saldo pré-transferência " + conta1.saldo);
+Console.WriteLine("Saldo pré-transferência " + conta2.saldo);
+bool  transferir = conta1.transferir(50, conta2);
+Console.WriteLine("Transferência realizada? " + transferir);
+Console.WriteLine("Saldo pós-transferência " + conta1.saldo);
+Console.WriteLine("Saldo pós-transferÊncia " + conta2.saldo);
+
+
+
+
+
+//Console.WriteLine("Saldo pré-saque: " + conta1.saldo);
+//bool saque = conta1.sacar(50);
+//Console.WriteLine("Saque realizado? "+ saque);
+//Console.WriteLine("Saldo pós-saque: " + conta1.saldo);
+//conta1.Depositar(60);
+//Console.WriteLine("Saldo pós-depósito: " + conta1.saldo);
 
 
 Console.ReadKey();
