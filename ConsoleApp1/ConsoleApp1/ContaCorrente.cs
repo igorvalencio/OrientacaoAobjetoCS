@@ -1,18 +1,17 @@
-﻿
-
-using ByteBank.titular;
-
+﻿using ByteBank.titular;
 namespace ByteBank;
 
 public class ContaCorrente
 {
-    public Cliente titular;
-    public string titular_cpf;
-    public string titular_profissao;
-    public string conta;
-    public int numero_agencia;
-    public string nome_agencia;
-    private double saldo;
+    public Cliente Titular { get; set; }
+  
+    public string conta { get; set; }
+
+    public int numero_agencia { get; set; }
+
+    public string nome_agencia { get; set; }
+
+    private double saldo { get; set; }
 
     public bool sacar(double valor)
     {
