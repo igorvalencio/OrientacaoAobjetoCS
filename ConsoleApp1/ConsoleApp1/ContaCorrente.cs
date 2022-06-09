@@ -12,7 +12,7 @@ public class ContaCorrente
     public string conta;
     public int numero_agencia;
     public string nome_agencia;
-    public double saldo;
+    private double saldo;
 
     public bool sacar(double valor)
     {
@@ -57,6 +57,24 @@ public bool transferir (double valor , ContaCorrente destino)
             return true;
         }
     }
+
+    public void DefinirSaldo(double valor)
+    {
+        if (valor < 0)
+        {
+            return;
+        }
+        else
+        {
+            saldo = saldo + valor;
+        }
+    }
+
+    public double ObterSaldo()
+    {
+        return saldo;
+    }
+
 }
 
 

@@ -1,4 +1,5 @@
-﻿
+﻿using ByteBank;
+using ByteBank.titular;
 
 //ContaCorrente conta1 = new ContaCorrente();
 
@@ -36,23 +37,27 @@
 //conta1.Depositar(60);
 //Console.WriteLine("Saldo pós-depósito: " + conta1.saldo);
 
-using ByteBank;
-using ByteBank.titular;
+//Cliente cliente = new Cliente();
 
-Cliente cliente = new Cliente();
+//conta3.nome = "Igor Neves";
+//conta3.cpf = "254938257 - 38";
+//conta3.profissao = "Tecnólogo";
 
-cliente.nome = "Igor Neves";
-cliente.cpf = "254938257 - 38";
-cliente.profissao = "Tecnólogo";
+//ContaCorrente conta3 = new ContaCorrente();
+//conta3.titular = new Cliente();
+//conta3.titular.nome = "Igor Neves";
+//conta3.titular.cpf = "254938257 - 38";
+//conta3.titular.profissao = "Tecnólogo";
 
-ContaCorrente conta3 = new ContaCorrente();
-conta3.titular = cliente;
-conta3.conta = "25413698";
-conta3.numero_agencia = 33;
-conta3.nome_agencia = "Agencia Central";
+//conta3.conta = "25413698";
+//conta3.numero_agencia = 33;
+//conta3.nome_agencia = "Agencia Central";
 
-Console.WriteLine(cliente.nome);
-Console.WriteLine(conta3.titular.nome);
+ContaCorrente conta4 = new ContaCorrente();
+
+conta4.DefinirSaldo(150);
+Console.WriteLine("Saldo: " + conta4.ObterSaldo());
+
 
 
 
