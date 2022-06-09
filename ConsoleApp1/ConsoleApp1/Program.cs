@@ -55,8 +55,8 @@ using ByteBank.titular;
 
 ContaCorrente conta4 = new ContaCorrente();
 
-conta4.DefinirSaldo(150);
-Console.WriteLine("Saldo: " + conta4.ObterSaldo());
+conta4.Saldo=150;
+Console.WriteLine("Saldo: " + conta4.Saldo);
 
 
 

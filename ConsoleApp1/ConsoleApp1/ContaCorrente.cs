@@ -58,21 +58,36 @@ public bool transferir (double valor , ContaCorrente destino)
         }
     }
 
-    public void DefinirSaldo(double valor)
-    {
-        if (valor < 0)
-        {
-            return;
-        }
-        else
-        {
-            saldo = saldo + valor;
-        }
-    }
+    //public void setSaldo(double valor)
+    //{
+    //    if (valor < 0)
+    //    {
+    //        return;
+    //    }
+    //    else
+    //    {
+    //        saldo = saldo + valor;
+    //    }
+    //}
 
-    public double ObterSaldo()
+    //public double getSaldo()
+    //{
+    //    return saldo;
+    //}
+
+    public double Saldo
     {
-        return saldo;
+        get
+        {
+            return saldo;
+        }
+        set
+        {
+            if (value < 0)
+            {
+                return;
+            } saldo = value;
+        }
     }
 
 }
