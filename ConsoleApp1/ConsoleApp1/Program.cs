@@ -53,10 +53,24 @@ using ByteBank.titular;
 //conta3.numero_agencia = 33;
 //conta3.nome_agencia = "Agencia Central";
 
-ContaCorrente conta4 = new ContaCorrente();
+//Cliente sarah = new Cliente();
+//sarah.nome = "SARAH SILVA";
 
-conta4.Saldo=150;
-Console.WriteLine("Saldo: " + conta4.Saldo);
+//ContaCorrente conta4 = new ContaCorrente(235, "365874-x");
+
+//conta4.Saldo=150;
+//conta4.Titular = sarah;
+
+//Console.WriteLine(conta4.Titular.nome);
+//Console.WriteLine(conta4.Saldo);
+//Console.WriteLine(conta4.Numero_agencia);
+//Console.WriteLine(conta4.conta);
+
+ContaCorrente conta5 = new ContaCorrente(235, "52198-x");
+
+ContaCorrente conta6 = new ContaCorrente(236, "32874-x");
+
+Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
 
 
 

@@ -4,11 +4,46 @@ namespace ByteBank;
 public class ContaCorrente
 {
     public Cliente Titular { get; set; }
-  
-    public string conta { get; set; }
+    
+    public string _conta;
+    public string conta
+    {
+        get
+        {
+            return _conta;
+        } set
+        {
+            if(value == null)
+            {
+                return;
+            }
+            else
+            {
+                _conta = value;
+            }
+        }
+    }
 
-    public int numero_agencia { get; set; }
+    private int _numero_agencia;
+    public int Numero_agencia 
+    { 
+    
+        get
+        {
+            return _numero_agencia;
 
+        }
+        set
+        {
+            if (value <= 0)
+            {
+
+            }
+            else
+            {
+                _numero_agencia = value;
+    }   }   }
+       
     public string nome_agencia { get; set; }
 
     private double saldo { get; set; }
@@ -34,13 +69,13 @@ public class ContaCorrente
 
     }
 
-public void Depositar(double valor)
+    public void Depositar(double valor)
     {
         saldo = saldo + valor;
  
    }
 
-public bool transferir (double valor , ContaCorrente destino)
+    public bool transferir (double valor , ContaCorrente destino)
     {
         if(saldo < valor)
         {
@@ -57,6 +92,12 @@ public bool transferir (double valor , ContaCorrente destino)
         }
     }
 
+    public ContaCorrente(int numero_agencia, string conta)
+    {
+        Numero_agencia = numero_agencia;
+        conta = conta;
+        TotalDeContasCriadas += 1;
+    }
     //public void setSaldo(double valor)
     //{
     //    if (valor < 0)
@@ -88,6 +129,8 @@ public bool transferir (double valor , ContaCorrente destino)
             } saldo = value;
         }
     }
+
+    public static int TotalDeContasCriadas { get; set; }
 
 }
 
